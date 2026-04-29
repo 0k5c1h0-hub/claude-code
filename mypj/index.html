@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>💩 똥 무게 맞추기</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="intro">
+  <div style="font-size:4rem">💩</div>
+  <h1>똥 무게 맞추기</h1>
+  <p>화면을 클릭하면 무게를 모르는 똥이 나타납니다.<br>
+     똥을 클릭해서 선택한 뒤, 정확한 무게(g)를 입력하세요!</p>
+  <ul>
+    <li>정확할수록 높은 점수</li>
+    <li>매 똥마다 무게가 다름 (1g ~ 9999g)</li>
+    <li>오차가 작을수록 보너스 점수</li>
+    <li>틀리면 감점!</li>
+  </ul>
+  <button id="start-btn">시작하기!</button>
+</div>
+
+<div id="hud">
+  <div class="title">💩 똥 무게 맞추기</div>
+  <div class="score-box">
+    <div class="stat"><label>점수</label><span id="score-display">0</span></div>
+    <div class="stat"><label>정답</label><span id="correct-display">0</span></div>
+    <div class="stat"><label>도전</label><span id="total-display">0</span></div>
+    <div class="stat"><label>최고점</label><span id="best-display">0</span></div>
+  </div>
+</div>
+
+<div id="game-area">
+  <div id="toilet-bg">🚽</div>
+</div>
+
+<div id="scale-bar"><div id="scale-fill"></div></div>
+
+<div id="guess-panel">
+  <label>현재 똥:</label>
+  <span class="selected-name" id="selected-info">없음</span>
+  <label>무게 추측:</label>
+  <input type="number" id="weight-input" placeholder="예: 350" min="1" max="99999" disabled />
+  <span id="unit">g</span>
+  <button id="submit-btn" disabled>제출</button>
+  <span id="hint-text">화면을 클릭해서 똥을 소환하세요!</span>
+</div>
+
+<div id="result-toast">
+  <div class="result-emoji" id="result-emoji">💩</div>
+  <div class="result-msg" id="result-msg"></div>
+  <div class="result-detail" id="result-detail"></div>
+  <div class="result-points" id="result-points"></div>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
